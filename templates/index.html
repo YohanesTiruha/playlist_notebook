@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Playlist to NootbookLM</title>
+    <link rel="stylesheet" href="{{url_for('static', filename='style.css')}}" />
+  </head>
+  <body>
+    <showcase class="container">
+      <h1 class="first-header">
+        Playlist-link to <span id="italic">video-links</span> converter for
+        NotebookLM
+      </h1>
+    </showcase>
+    <form method="POST" action="/" class="form-container">
+      <label for="playlist-link">Enter YouTube playlist link:</label>
+      <div class="submit-container">
+        <input
+          type="url"
+          name="playlist-link"
+          id="playlist-link"
+          placeholder="https://www.youtube.com/playlist?list=..."
+          required
+        />
+        <button class="btn" type="submit">Submit</button>
+      </div>
+    </form>
+    <div class="output">
+      <p class="message">
+        NotebookLM accepts only 50 Video-links. Thus, each batch contains 50
+        links.
+      </p>
+      <div class="result-container">
+        <ul class="reuslt-lists">
+          <li class="btn result-1">Copy Batch 1</li>
+          <li class="btn result-2">Copy Batch 2</li>
+          <li class="btn result-2">Copy Batch 2</li>
+        </ul>
+      </div>
+    </div>
+    <footer class="foot message">&copy; Made by Yohanes Tirhua.</footer>
+    <script src="{{url_for('static', filename='script.js')}}"></script>
+  </body>
+</html>
