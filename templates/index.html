@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Playlist to NootbookLM</title>
+    <title>Playlist to NotebookLM</title>
     <link rel="stylesheet" href="{{url_for('static', filename='style.css')}}" />
   </head>
   <body>
@@ -23,7 +23,7 @@
           placeholder="https://www.youtube.com/playlist?list=..."
           required
         />
-        <button class="btn" type="submit">Submit</button>
+        <button id="submit-btn-link" class="btn" type="button">Submit</button>
       </div>
     </form>
     <div class="output">
@@ -32,10 +32,10 @@
         links.
       </p>
       <div class="result-container">
-        <ul class="reuslt-lists">
+        <ul class="result-lists">
           <li class="btn result-1">Copy Batch 1</li>
           <li class="btn result-2">Copy Batch 2</li>
-          <li class="btn result-2">Copy Batch 2</li>
+          <li class="btn result-3">Copy Batch 3</li>
         </ul>
       </div>
     </div>
