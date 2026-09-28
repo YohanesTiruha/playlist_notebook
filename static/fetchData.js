@@ -15,6 +15,6 @@ export const fetchData = async (e) => {
     const data = await response.json();
     return data; // Return the server response if everything is fine
   } catch (error) {
-    return error; // Exit the function if there was an error
+    return error; // return the error object if there was an error.
   }
 };
