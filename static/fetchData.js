@@ -8,19 +8,13 @@ export const fetchData = async (e) => {
       body: JSON.stringify({ playlist_link: playlistLink }),
     });
     if (!response.ok) {
-      throw new Error("Network response was not ok");
+      throw new Error(
+        `Server error: ${response.status} Please try again later.`,
+      );
     }
     const data = await response.json();
-    console.log("Response from server:", data);
-    if (data.warning === null) {
-      return data;
-    }
-    if (data.warning !== null) {
-      console.error("Server returned an error:", data.warning);
-      return; // Exit the function if the server returned an error
-    }
+    return data; // Return the server response if everything is fine
   } catch (error) {
-    console.error("Fatal Error fetching data from server:", error);
-    return; // Exit the function if there was an error
+    return error; // Exit the function if there was an error
   }
 };

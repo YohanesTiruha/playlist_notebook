@@ -3,14 +3,14 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Playlist to NotebookLM</title>
+    <title>Playlist to Gemini Notebook</title>
     <link rel="stylesheet" href="{{url_for('static', filename='style.css')}}" />
   </head>
   <body>
     <showcase class="container">
       <h1 class="first-header">
         Playlist-link to <span id="italic">video-links</span> converter for
-        NotebookLM
+        Gemini Notebook
       </h1>
     </showcase>
     <form method="POST" action="/" class="form-container">
@@ -28,14 +28,22 @@
     </form>
     <div class="output">
       <p class="message">
-        NotebookLM accepts only 50 Video-links. Thus, each batch contains 50
-        links.
+        Gemini Notebook accepts only 50 Video-links. Thus, each batch contains a
+        maximum of 50 links.
       </p>
       <div class="result-container">
         <ul class="result-lists"></ul>
       </div>
     </div>
     <footer class="foot message">&copy; Made by Yohanes Tirhua.</footer>
+    <!--loading overlay image when loading the playlist video-links-->
+    <div class="loading-overlay">
+      <div class="loading-spin"></div>
+    </div>
+    <!--Showing warning messages if any-->
+    <div class="warning-container">
+      <p class="warning-message"></p>
+    </div>
     <script
       type="module"
       src="{{url_for('static', filename='script.js')}}"
