@@ -25,19 +25,22 @@ const hideOutputContainer = () => {
 };
 hideOutputContainer();
 //function for displaying output and other DOM modifications
-const outputDisplayOn = (totalNumberOfBatches) => {
+const outputDisplayOn = () => {
   formContainer.style.marginBottom = "0px";
   outputContainer.style.display = "block";
+};
+const resultListGridAdjustment = (totalNumberOfBatches) => {
   if (totalNumberOfBatches === 1) {
     resultList.style.gridTemplateColumns = "1fr";
-  } else if (totalNumberOfBatches % 2 !== 0) {
+  } else if (totalNumberOfBatches % 2 != 0) {
+    console.log(resultList.lastElementChild);
+    resultList.style.gridTemplateColumns = "1fr 1fr";
     resultList.lastElementChild.style.gridColumn = "1 / -1";
     resultList.lastElementChild.style.justifySelf = "center";
   } else {
     resultList.style.gridTemplateColumns = "1fr 1fr";
   }
 };
-
 // Function for showing the list buttons of each batch of videos
 const showCopyButtons = (batch_of_videos_link) => {
   resultList.innerHTML = "";
@@ -47,6 +50,7 @@ const showCopyButtons = (batch_of_videos_link) => {
     list.textContent = `Copy Batch ${index + 1}`;
     resultList.appendChild(list);
   });
+  resultListGridAdjustment(batch_of_videos_link.length);
 };
 
 // function inside copyBatchLinks for handling click events on the result list items

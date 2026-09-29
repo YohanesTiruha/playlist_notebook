@@ -1,4 +1,28 @@
-@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap");
+/* playfair-display-regular - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: "Playfair Display";
+  font-style: normal;
+  font-weight: 400;
+  src: url("./fonts/playfair-display-v40-latin-regular.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+/* playfair-display-700 - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: "Playfair Display";
+  font-style: normal;
+  font-weight: 700;
+  src: url("./fonts/playfair-display-v40-latin-700.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+/* playfair-display-900 - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: "Playfair Display";
+  font-style: normal;
+  font-weight: 900;
+  src: url("./fonts/playfair-display-v40-latin-900.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+
 :root {
   --primary-color: #c6a75e;
   --secondary-color: #1f2a44;
@@ -36,7 +60,7 @@ p {
   text-wrap: pretty;
 }
 body {
-  font-family: "Playfair Display", serif;
+  font-family: "Playfair Display", Arial, Helvetica, sans-serif, serif;
   background: var(--secondary-color);
   color: var(--third-color);
   line-height: 1.5;
@@ -115,7 +139,8 @@ body {
 }
 .result-lists {
   width: 100%;
-  border: 3px solid var(--primary-color);
+  border: 1px solid var(--primary-color);
+  border-radius: 5px;
   background-color: var(--primary-color);
   display: grid;
   grid-template-columns: 1fr 1fr;
