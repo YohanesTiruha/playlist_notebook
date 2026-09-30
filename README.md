@@ -1,6 +1,9 @@
-# YouTube Playlist to NotebookLM Links
+Follow the link to use the app.
+https://youtube-playlist-to-gemini-notebook.onrender.com/
 
-A small Flask web app that turns a YouTube playlist into video URLs grouped into batches of up to 50, ready to add to Gemini Notebook(NotebookLM). Each batch can be copied to the clipboard from the results page.
+# YouTube Playlist to NotebookLM (Gemini Notebook).
+
+A small Flask web app that turns a YouTube playlist into video URLs grouped into batches of up to 50, ready to add to Gemini Notebook (NotebookLM). Each batch can be copied to the clipboard from the results page.
 
 ## Run locally
 
